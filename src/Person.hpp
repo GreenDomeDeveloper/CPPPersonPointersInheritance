@@ -112,7 +112,7 @@ class Person {
         /**
          * @brief Prints the person's information to console
          */
-        void printInfo();
+        virtual void printInfo();
         
         /**
          * @brief Gets the total population (number of Person objects)

@@ -8,4 +8,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(PersonProject)
 
 # Add the executable
-add_executable(PersonProject src/Person.cpp src/main.cpp)
+add_executable(PersonProject src/Person.cpp src/Student.cpp src/main.cpp)

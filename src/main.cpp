@@ -1,12 +1,29 @@
 #include "Person.hpp"
+#include "Student.hpp"
 #include <iostream>
 using namespace std;
 
 int main() {
 
+    Student s1;
+    Student s2("Bob",33,3.2);
+    Student* s3 = new Student();
+    Student* s4 = new Student("Phil",17,4.2);
+
+    cout <<"Testing Basic Student Creation"<<endl;
+    s1.printInfo();
+    s2.printInfo();
+    s3->printInfo();
+    s4->printInfo();
+
+    cout <<"\nTesting Pointers"<<endl;
+    Person* pptr = new Student("Kim",55,3.75);
+    pptr->printInfo();
+   
+ /*
     cout<<"\nCheck Population ...."<<endl;
     cout<<Person::getPopulation()<<endl;
-   /*
+   
     Person p1;
     Person p2("Mary Johnson",21);
 
@@ -29,7 +46,7 @@ int main() {
 
     cout<<"\nCheck Population ...."<<endl;
     cout<<Person::getPopulation()<<endl;
-*/
+
     // Now fun with pointers
 
     Person* p4 = new Person; // default constructor
@@ -50,6 +67,6 @@ int main() {
 
     cout<<"\nCheck Population ...."<<endl;
     cout<<Person::getPopulation()<<endl;
-    
+    */
     return 0;
 } 
