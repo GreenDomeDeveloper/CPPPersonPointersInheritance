@@ -1,6 +1,7 @@
 #include "Person.hpp"
 #include "Student.hpp"
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
@@ -9,6 +10,7 @@ int main() {
     Student s2("Bob",33,3.2);
     Student* s3 = new Student();
     Student* s4 = new Student("Phil",17,4.2);
+    vector<Person *> village;
 
     cout <<"Testing Basic Student Creation"<<endl;
     s1.printInfo();
@@ -19,6 +21,19 @@ int main() {
     cout <<"\nTesting Pointers"<<endl;
     Person* pptr = new Student("Kim",55,3.75);
     pptr->printInfo();
+
+    cout<<"\nTesting collections"<<endl;
+    village.push_back(new Person());
+    village.push_back(new Person("Carl",12));
+    village.push_back(new Person("Mary",33,"Braniac"));
+    village.push_back(new Student());
+    village.push_back(new Student("Lisa", 40, 3.25));
+
+    for (int i=0; i< village.size(); i++){
+        village.at(i)->printInfo();
+    }
+
+    
    
  /*
     cout<<"\nCheck Population ...."<<endl;
